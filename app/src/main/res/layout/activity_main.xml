@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
     tools:context=".MainActivity">
 
     <com.ripple.view.RippleView
-        android:id="@+id/ripple"
+        android:id="@+id/ripple_fill"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        app:ripple_circle_color="@color/teal_700"
+        app:ripple_circle_count="3"
+        app:ripple_circle_min_radius="10dp"
+        app:ripple_circle_style="FILL"
+        app:ripple_speed="0.5" />
 
-</FrameLayout>
+    <com.ripple.view.RippleView
+        android:id="@+id/ripple_stroke"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        app:ripple_circle_color="@color/teal_700"
+        app:ripple_circle_count="6"
+        app:ripple_circle_min_radius="0dp"
+        app:ripple_circle_stroke_width="2dp"
+        app:ripple_circle_style="STROKE"
+        app:ripple_speed="0.5" />
+</LinearLayout>
