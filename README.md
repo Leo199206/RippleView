@@ -22,7 +22,7 @@ allprojects {
 + 添加以下maven依赖配置到app模块，gradle文件下
 
 ```
-implementation  'com.github.Leo199206:RippleView:1.0.0'
+implementation  'com.github.Leo199206:RippleView:1.0.1'
 ```
 
 #### 添加到布局
