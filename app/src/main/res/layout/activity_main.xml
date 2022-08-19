@@ -1,36 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    android:gravity="center"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
     tools:context=".MainActivity">
 
-    <com.ripple.view.RippleView
-        android:id="@+id/ripple_fill"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
-        app:ripple_circle_color="@color/teal_700"
-        app:ripple_circle_count="3"
-        app:ripple_circle_min_radius="10dp"
-        app:ripple_circle_style="FILL"
-        app:ripple_speed="0.5" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-    <com.ripple.view.RippleView
-        android:id="@+id/ripple_stroke"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
-        app:ripple_circle_color="@color/teal_700"
-        app:ripple_circle_count="6"
-        app:ripple_circle_min_radius="0dp"
-        app:ripple_circle_stroke_width="2dp"
-        app:ripple_circle_style="STROKE"
-        app:ripple_speed="0.5" />
-</LinearLayout>
+        <com.ripple.view.RippleView
+            android:id="@+id/ripple_fill"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            app:ripple_circle_color="@color/teal_700"
+            app:ripple_circle_count="3"
+            app:ripple_circle_min_radius="10dp"
+            app:ripple_circle_style="FILL"
+            app:ripple_speed="0.5" />
+
+        <com.ripple.view.RippleView
+            android:id="@+id/ripple_stroke"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            app:ripple_circle_color="@color/teal_700"
+            app:ripple_circle_count="6"
+            app:ripple_circle_min_radius="0dp"
+            app:ripple_circle_stroke_width="1dp"
+            app:ripple_circle_style="STROKE"
+            app:ripple_speed="0.5" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <com.ripple.view.RippleView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:ripple_circle_color="@color/teal_700"
+                app:ripple_circle_count="3"
+                app:ripple_circle_min_radius="30dp"
+                app:ripple_circle_start="true"
+                app:ripple_circle_stroke_width="1dp"
+                app:ripple_circle_style="STROKE"
+                app:ripple_speed="0.5" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/holo_blue_dark"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher_foreground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:roundPercent="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <com.ripple.view.RippleView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:ripple_circle_color="@color/teal_700"
+                app:ripple_circle_count="3"
+                app:ripple_circle_min_radius="30dp"
+                app:ripple_circle_start="true"
+                app:ripple_circle_style="FILL"
+                app:ripple_speed="0.5" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/holo_blue_dark"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_foreground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:roundPercent="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

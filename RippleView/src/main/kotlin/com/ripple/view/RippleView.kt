@@ -30,6 +30,9 @@ class RippleView : View {
     ) {
         initAttributes(attrs)
         initPaint()
+        if (isStart) {
+            onStart()
+        }
     }
 
     companion object {
@@ -88,6 +91,9 @@ class RippleView : View {
                             Paint.Style.STROKE
                         }
                     }
+                }
+                R.styleable.RippleView_ripple_circle_start -> {
+                    isStart = array.getBoolean(indexedValue, false)
                 }
             }
         }
@@ -218,7 +224,7 @@ class RippleView : View {
             return
         }
         val minMeet = (circleMaxRadius - circleMinRadius) / circleCount
-        val add = circleList.last().radius > minMeet
+        val add = circleList.last().radius > minMeet + circleMinRadius
         if (add) {
             circleList.add(RippleCircle(circleMinRadius, MAX_ALPHA))
         }

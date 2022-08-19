@@ -10,5 +10,6 @@
         </attr>
         <attr name="ripple_speed" format="float" />
         <attr name="ripple_circle_stroke_width" format="dimension" />
+        <attr name="ripple_circle_start" format="boolean" />
     </declare-styleable>
 </resources>
