@@ -5,7 +5,7 @@
 - [x] 支持Lifecycle绑定，自动暂停、恢复动画
 
 #### 效果预览
-<img src="https://raw.githubusercontent.com/Leo199206/RippleView/main/image/device-2021-03-22-132121.gif" width="300" heght="500" align=center />
+<img src="https://raw.githubusercontent.com/Leo199206/RippleView/main/image/device-2022-08-19-160411_.gif" width="300" heght="500" align=center />
 
 
 #### 依赖
